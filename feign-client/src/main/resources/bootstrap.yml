@@ -1,0 +1,8 @@
+server:
+  port: 2222
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: feign-client

@@ -1,0 +1,7 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+feign:
+  client:
+    url: http://localhost:2222/httpTest
