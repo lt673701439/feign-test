@@ -23,7 +23,7 @@ public class FeignEurekaController {
 	 */
 	@GetMapping(value = "/eurekaTest")
 	public Map<String, Object> eurekaTest() {
-		logger.info("进入 eurekaTest 接口");
+		logger.info("调用了 eurekaTest 接口");
 		Map<String, Object> map = new HashMap<>(4);
 		map.put("bbb", "eurekaTest 返回成功");
 		return map;

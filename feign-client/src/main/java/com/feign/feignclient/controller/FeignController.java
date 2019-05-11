@@ -46,14 +46,14 @@ public class FeignController {
 	 */
 	@GetMapping(value = "/httpTest")
 	public Map<String, Object> httpTest() {
-		logger.info("进入 httpTest 接口");
+		logger.info("调用了 httpTest 接口");
 		Map<String, Object> map = new HashMap<>(4);
 		map.put("aaa", "httpTest 返回成功");
 		return map;
 	}
 
 	/**
-	 * http方式调用入口
+	 * eureka方式调用入口
 	 *
 	 * @return
 	 */

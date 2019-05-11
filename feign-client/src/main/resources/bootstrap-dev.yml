@@ -2,6 +2,12 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:1111/eureka/
+      registry-fetch-interval-seconds: 2
+  instance:
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 5
+    lease-renewal-interval-in-seconds: 2
+
 feign:
   client:
-    url: http://localhost:2222/httpTest
+    url: http://localhost:2222/

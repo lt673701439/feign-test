@@ -22,10 +22,12 @@ public interface FeignHttpClient {
 
 	/**
 	 * http方式调用
+	 * feign 通过url地址调用其它接口时，@FeignClient.url属性和@RequestMapping.value属性可以共存
+	 * 这样可以更加灵活的定义不同的接口所映射的方法
 	 *
 	 * @return
 	 */
-	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(value = "/httpTest", method = RequestMethod.GET)
 	Map<String, Object> feignHttp();
 
 
@@ -44,7 +46,7 @@ class FeignHttpClientFallBack implements FeignHttpClient, FallbackFactory<FeignH
 
 	@Override
 	public Map<String, Object> feignHttp() {
-		logger.error("FeignHttpClient feignHttp 接口调用失败！");
+		logger.error("FeignHttpClient feignHttp 接口调用失败！", throwable);
 		return null;
 	}
 }

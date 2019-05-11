@@ -44,7 +44,7 @@ class FeignEurekaClientFallBack implements FeignEurekaClient, FallbackFactory<Fe
 
 	@Override
 	public Map<String, Object> feignEureka() {
-		logger.error("FeignEurekaClient feignEureka 接口调用失败！");
+		logger.error("FeignEurekaClient feignEureka 接口调用失败！", throwable);
 		return null;
 	}
 }
